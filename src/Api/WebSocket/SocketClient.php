@@ -19,9 +19,6 @@ class SocketClient
     private $config=[];
     private $keysecret=[];
 
-
-
-
     function __construct(array $config=[])
     {
         $this->config=$config;
