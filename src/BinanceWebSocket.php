@@ -40,8 +40,8 @@ class BinanceWebSocket
         $ws->transport = 'ssl';
         $ws->send($this->subscribe);
         $ws->onMessage = function($connection, $data) use ($callback) {
-            $json = json_decode($data);
-            call_user_func($callback, $this, $data);
+            $json = json_decode($data, true);
+            call_user_func($callback, $this, $json);
         };
         $ws->onError = function($ws, $code, $msg){
             $ws->reConnect(1);
