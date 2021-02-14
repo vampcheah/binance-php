@@ -31,7 +31,6 @@ class Binance
             'key'=>$this->key,
             'secret'=>$this->secret,
             'host'=>$this->host,
-
             'options'=>$this->options,
         ];
     }
