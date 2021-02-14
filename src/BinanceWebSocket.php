@@ -3,10 +3,10 @@
  * @author francis
  * */
 
-namespace Francis\Binance;
+namespace Francis\Exchange;
 
-use Francis\Binance\Api\WebSocket\SocketServer;
-use Francis\Binance\Api\WebSocket\SocketClient;
+use Francis\Exchange\Api\WebSocket\SocketServer;
+use Francis\Exchange\Api\WebSocket\SocketClient;
 
 
 class BinanceWebSocket

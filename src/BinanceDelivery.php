@@ -3,12 +3,12 @@
  * @author francis
  * */
 
-namespace Francis\Binance;
+namespace Francis\Exchange;
 
 
-use Francis\Binance\Api\Delivery\User;
-use Francis\Binance\Api\Delivery\Trade;
-use Francis\Binance\Api\Delivery\Market;
+use Francis\Exchange\Api\Delivery\User;
+use Francis\Exchange\Api\Delivery\Trade;
+use Francis\Exchange\Api\Delivery\Market;
 
 class BinanceDelivery
 {

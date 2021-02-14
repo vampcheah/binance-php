@@ -3,10 +3,10 @@
  * @author francis
  * */
 
-namespace Francis\Binance\Api\WebSocket;
+namespace Francis\Exchange\Api\WebSocket;
 
-use Francis\Binance\Api\WebSocket\SocketGlobal;
-use Francis\Binance\Api\WebSocket\SocketFunction;
+use Francis\Exchange\Api\WebSocket\SocketGlobal;
+use Francis\Exchange\Api\WebSocket\SocketFunction;
 
 use Workerman\Lib\Timer;
 use Workerman\Worker;

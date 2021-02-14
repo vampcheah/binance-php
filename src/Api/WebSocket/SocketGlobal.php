@@ -3,7 +3,7 @@
  * @author francis
  * */
 
-namespace Francis\Binance\Api\WebSocket;
+namespace Francis\Exchange\Api\WebSocket;
 
 use GlobalData\Server;
 use GlobalData\Client;

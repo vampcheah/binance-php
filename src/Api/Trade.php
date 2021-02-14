@@ -3,9 +3,9 @@
  * @author francis
  * */
 
-namespace Francis\Binance\Api;
+namespace Francis\Exchange\Api;
 
-use Francis\Binance\Request;
+use Francis\Exchange\Request;
 
 class Trade extends Request
 {

@@ -3,12 +3,12 @@
  * @author francis
  * */
 
-namespace Francis\Binance;
+namespace Francis\Exchange;
 
 
-use Francis\Binance\Api\Futures\User;
-use Francis\Binance\Api\Futures\Trade;
-use Francis\Binance\Api\Futures\Market;
+use Francis\Exchange\Api\Futures\User;
+use Francis\Exchange\Api\Futures\Trade;
+use Francis\Exchange\Api\Futures\Market;
 
 class BinanceFuture
 {

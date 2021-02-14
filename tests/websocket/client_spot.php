@@ -9,7 +9,7 @@
  * Most of them are unfinished and need your help
  * https://github.com/zhouaini528/okex-php.git
  * */
-use \Francis\BinanceWebSocket;
+use \Francis\ExchangeWebSocket;
 
 require __DIR__ .'../../../vendor/autoload.php';
 

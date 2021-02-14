@@ -3,10 +3,10 @@
  * @author francis
  * */
 
-namespace Francis\Binance;
+namespace Francis\Exchange;
 
 use GuzzleHttp\Exception\RequestException;
-use Francis\Binance\Exceptions\Exception;
+use Francis\Exchange\Exceptions\Exception;
 
 class Request
 {

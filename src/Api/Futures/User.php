@@ -3,9 +3,9 @@
  * @author francis
  * */
 
-namespace Francis\Binance\Api\Futures;
+namespace Francis\Exchange\Api\Futures;
 
-use Francis\Binance\Request;
+use Francis\Exchange\Request;
 
 class User extends Request
 {

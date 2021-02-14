@@ -3,9 +3,9 @@
  * @author francis
  * */
 
-namespace Francis\Binance\Api\Delivery;
+namespace Francis\Exchange\Api\Delivery;
 
-use Francis\Binance\Request;
+use Francis\Exchange\Request;
 
 class Market extends Request
 {

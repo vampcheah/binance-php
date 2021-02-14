@@ -1,5 +1,5 @@
 <?php
-namespace Francis\Binance\Exceptions;
+namespace Francis\Exchange\Exceptions;
 
 class Exception extends \Exception
 {
