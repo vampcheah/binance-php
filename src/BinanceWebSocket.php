@@ -39,7 +39,7 @@ class BinanceWebSocket
         $ws = new AsyncTcpConnection($this->getBaseUrl());
         $ws->transport = 'ssl';
         $ws->send($this->subscribe);
-        $ws->onMessage = function($connection, $data){
+        $ws->onMessage = function($connection, $data) use ($callback) {
             $json = json_decode($data);
             call_user_func($callback, $this, $data);
         };
