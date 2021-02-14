@@ -3,10 +3,10 @@
  * @author francis
  * */
 
-namespace Francis\Exchange;
+namespace Vampcheah\Exchange;
 
 use GuzzleHttp\Exception\RequestException;
-use Francis\Exchange\Exceptions\Exception;
+use Vampcheah\Exchange\Exceptions\Exception;
 
 class Request
 {

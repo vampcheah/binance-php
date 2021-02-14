@@ -3,9 +3,9 @@
  * @author francis
  * */
 
-namespace Francis\Exchange\Api\Delivery;
+namespace Vampcheah\Exchange\Api\Delivery;
 
-use Francis\Exchange\Request;
+use Vampcheah\Exchange\Request;
 
 class User extends Request
 {

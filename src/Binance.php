@@ -3,11 +3,11 @@
  * @author francis
  * */
 
-namespace Francis\Exchange;
+namespace Vampcheah\Exchange;
 
-use Francis\Exchange\Api\User;
-use Francis\Exchange\Api\System;
-use Francis\Exchange\Api\Trade;
+use Vampcheah\Exchange\Api\User;
+use Vampcheah\Exchange\Api\System;
+use Vampcheah\Exchange\Api\Trade;
 
 class Binance
 {

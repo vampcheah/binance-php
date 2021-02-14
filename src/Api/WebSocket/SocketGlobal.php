@@ -3,7 +3,7 @@
  * @author francis
  * */
 
-namespace Francis\Exchange\Api\WebSocket;
+namespace Vampcheah\Exchange\Api\WebSocket;
 
 use GlobalData\Server;
 use GlobalData\Client;

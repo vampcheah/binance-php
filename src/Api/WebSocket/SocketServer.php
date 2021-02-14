@@ -3,10 +3,10 @@
  * @author francis
  * */
 
-namespace Francis\Exchange\Api\WebSocket;
+namespace Vampcheah\Exchange\Api\WebSocket;
 
-use Francis\Exchange\Api\WebSocket\SocketGlobal;
-use Francis\Exchange\Api\WebSocket\SocketFunction;
+use Vampcheah\Exchange\Api\WebSocket\SocketGlobal;
+use Vampcheah\Exchange\Api\WebSocket\SocketFunction;
 use Workerman\Lib\Timer;
 use Workerman\Worker;
 use Workerman\Connection\AsyncTcpConnection;

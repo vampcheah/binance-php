@@ -3,12 +3,12 @@
  * @author francis
  * */
 
-namespace Francis\Exchange;
+namespace Vampcheah\Exchange;
 
 
-use Francis\Exchange\Api\Futures\User;
-use Francis\Exchange\Api\Futures\Trade;
-use Francis\Exchange\Api\Futures\Market;
+use Vampcheah\Exchange\Api\Futures\User;
+use Vampcheah\Exchange\Api\Futures\Trade;
+use Vampcheah\Exchange\Api\Futures\Market;
 
 class BinanceFuture
 {

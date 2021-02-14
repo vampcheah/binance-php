@@ -3,7 +3,7 @@
  * @author francis
  * */
 
-namespace Francis\Exchange\Api\WebSocket;
+namespace Vampcheah\Exchange\Api\WebSocket;
 
 
 trait SocketFunction
@@ -22,18 +22,18 @@ trait SocketFunction
 
         switch ($this->config['baseurl']){
             case 'ws://fstream.binance.com':{
-                $binance=new \Francis\ExchangeFuture($key_secret['key'],$key_secret['secret']);
+                $binance=new \Vampcheah\ExchangeFuture($key_secret['key'],$key_secret['secret']);
                 $listen_key=$binance->user()->postListenKey();
                 break;
             }
             case 'ws://dstream.binance.com':{
-                $binance=new \Francis\ExchangeDelivery($key_secret['key'],$key_secret['secret']);
+                $binance=new \Vampcheah\ExchangeDelivery($key_secret['key'],$key_secret['secret']);
                 $listen_key=$binance->user()->postListenKey();
                 break;
             }
             //ws://stream.binance.com:9443
             default:{
-                $binance=new \Francis\Exchange($key_secret['key'],$key_secret['secret']);
+                $binance=new \Vampcheah\Exchange($key_secret['key'],$key_secret['secret']);
                 $listen_key=$binance->user()->postUserDataStream();
             }
         }

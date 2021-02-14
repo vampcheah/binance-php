@@ -3,9 +3,9 @@
  * @author francis
  * */
 
-namespace Francis\Exchange\Api\Futures;
+namespace Vampcheah\Exchange\Api\Futures;
 
-use Francis\Exchange\Request;
+use Vampcheah\Exchange\Request;
 
 class Trade extends Request
 {

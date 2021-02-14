@@ -3,12 +3,12 @@
  * @author francis
  * */
 
-namespace Francis\Exchange;
+namespace Vampcheah\Exchange;
 
 
-use Francis\Exchange\Api\Delivery\User;
-use Francis\Exchange\Api\Delivery\Trade;
-use Francis\Exchange\Api\Delivery\Market;
+use Vampcheah\Exchange\Api\Delivery\User;
+use Vampcheah\Exchange\Api\Delivery\Trade;
+use Vampcheah\Exchange\Api\Delivery\Market;
 
 class BinanceDelivery
 {

@@ -9,7 +9,7 @@
  * Most of them are unfinished and need your help
  * https://github.com/zhouaini528/huobi-php.git
  * */
-use Francis\Exchange;
+use Vampcheah\Exchange;
 
 require __DIR__ .'../../../vendor/autoload.php';
 

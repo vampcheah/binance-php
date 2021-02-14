@@ -1,5 +1,5 @@
 <?php
-namespace Francis\Exchange\Exceptions;
+namespace Vampcheah\Exchange\Exceptions;
 
 class Exception extends \Exception
 {
