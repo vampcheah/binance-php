@@ -25,12 +25,11 @@ class BinanceWebSocket
      * @param array $subscribe
      */
     public function subscribe(array $subscribe=[]){
-        $data=[
+        $this->subscribe = json_encode([
             "method"=>"SUBSCRIBE",
-            'params'=>$sub,
+            'params'=>$subscribe,
             'id'=>1
-        ];
-        $this->subscribe=json_encode($subscribe);
+        ]);
     }
 
     /**
