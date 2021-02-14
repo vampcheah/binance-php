@@ -25,7 +25,7 @@ composer require vampcheah/binance-php-api
 
 Support for more request Settings [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/spot/proxy.php#L21)
 ```php
-use Francis\Binance\Binance;
+use Francis\Binance;
 $binance=new Binance($key,$secret);
 
 //You can set special needs
@@ -52,7 +52,7 @@ $binance->setOptions([
 System related API [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/spot/system.php)
 
 ```php
-use Francis\Binance\Binance;
+use Francis\Binance;
 $binance=new Binance();
 
 //Order book
@@ -91,7 +91,7 @@ try {
 Trade related API [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/spot/trade.php)
 
 ```php
-use Francis\Binance\Binance;
+use Francis\Binance;
 $binance=new Binance($key,$secret);
 
 //Send in a new order.
@@ -137,7 +137,7 @@ try {
 User related API [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/spot/user.php)
 
 ```php
-use Francis\Binance\Binance;
+use Francis\Binance;
 $binance=new Binance($key,$secret);
 
 //Get all account orders; active, canceled, or filled.
@@ -172,8 +172,8 @@ try {
 Market related API [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/future/system.php)
 
 ```php
-use Francis\Binance\BinanceFuture;
-use Francis\Binance\BinanceDelivery;
+use Francis\BinanceFuture;
+use Francis\BinanceDelivery;
 
 $binance=new BinanceFuture();
 //Or New Delivery
@@ -248,8 +248,8 @@ try {
 Trade related API [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/future/trade.php)
 
 ```php
-use Francis\Binance\BinanceFuture;
-use Francis\Binance\BinanceDelivery;
+use Francis\BinanceFuture;
+use Francis\BinanceDelivery;
 
 $binance=new BinanceFuture();
 //Or New Delivery
@@ -302,8 +302,8 @@ try {
 User related API [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/future/user.php)
 
 ```php
-use Francis\Binance\BinanceFuture;
-use Francis\Binance\BinanceDelivery;
+use Francis\BinanceFuture;
+use Francis\BinanceDelivery;
 
 $binance=new BinanceFuture();
 //Or New Delivery
@@ -378,7 +378,7 @@ Websocket has two services, server and client. The server is responsible for dea
 
 Server initialization must be started in cli mode.
 ```php
-use \Francis\Binance\BinanceWebSocket;
+use \Francis\BinanceWebSocket;
 require __DIR__ .'./vendor/autoload.php';
 
 $binance=new BinanceWebSocket();

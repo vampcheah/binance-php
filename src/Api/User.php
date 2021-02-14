@@ -14,7 +14,7 @@ class User extends Request
 
     /**
      * 查看账户当前挂单 (USER_DATA)
-    GET /api/v3/openOrders  (HMAC SHA256)
+     * GET /api/v3/openOrders  (HMAC SHA256)
      * */
     public function getOpenOrders(array $data=[]){
         $this->type='GET';
@@ -25,16 +25,16 @@ class User extends Request
 
     /**
      *查询所有订单（包括历史订单） (USER_DATA)
-    GET /api/v3/allOrders (HMAC SHA256)
+     * GET /api/v3/allOrders (HMAC SHA256)
 
-    Name	Type	Mandatory	Description
-    symbol	STRING	YES
-    orderId	LONG	NO	只返回此orderID之后的订单，缺省返回最近的订单
-    startTime	LONG	NO
-    endTime	LONG	NO
-    limit	INT	NO	Default 500; max 1000.
-    recvWindow	LONG	NO
-    timestamp	LONG	YES
+     * Name	Type	Mandatory	Description
+     * symbol	STRING	YES
+     * orderId	LONG	NO	只返回此orderID之后的订单，缺省返回最近的订单
+     * startTime	LONG	NO
+     * endTime	LONG	NO
+     * limit	INT	NO	Default 500; max 1000.
+     * recvWindow	LONG	NO
+     * timestamp	LONG	YES
      * */
     public function getAllOrders(array $data=[]){
         $this->type='GET';
@@ -49,14 +49,14 @@ class User extends Request
 
     /**
      *查询订单 (USER_DATA)
-    GET /api/v3/order (HMAC SHA256)
+     * GET /api/v3/order (HMAC SHA256)
 
-    Name	Type	Mandatory	Description
-    symbol	STRING	YES
-    orderId	LONG	NO
-    origClientOrderId	STRING	NO
-    recvWindow	LONG	NO
-    timestamp	LONG	YES
+     * Name	Type	Mandatory	Description
+     * symbol	STRING	YES
+     * orderId	LONG	NO
+     * origClientOrderId	STRING	NO
+     * recvWindow	LONG	NO
+     * timestamp	LONG	YES
      * */
     public function getOrder(array $data){
         $this->type='GET';
@@ -70,11 +70,11 @@ class User extends Request
 
     /**
      *账户信息 (USER_DATA)
-    GET /api/v3/account (HMAC SHA256)
+     * GET /api/v3/account (HMAC SHA256)
 
-    Name	Type	Mandatory	Description
-    recvWindow	LONG	NO
-    timestamp	LONG	YES
+     * Name	Type	Mandatory	Description
+     * recvWindow	LONG	NO
+     * timestamp	LONG	YES
      * */
     public function getAccount(array $data=[]){
         $this->type='GET';
@@ -89,7 +89,7 @@ class User extends Request
 
     /**
      *账户成交历史 (USER_DATA)
-    GET /api/v3/myTrades  (HMAC SHA256)
+     * GET /api/v3/myTrades  (HMAC SHA256)
      * */
     public function getMyTrades(array $data=[]){
         $this->type='GET';
@@ -100,7 +100,7 @@ class User extends Request
 
     /**
      *充值历史 (USER_DATA)
-    GET /wapi/v3/depositHistory.html (HMAC SHA256)
+     * GET /wapi/v3/depositHistory.html (HMAC SHA256)
      * */
     public function getDepositHistory(array $data=[]){
         $this->type='GET';
@@ -111,7 +111,7 @@ class User extends Request
 
     /**
      *提现历史 (USER_DATA)
-    GET /wapi/v3/withdrawHistory.html (HMAC SHA256)
+     * GET /wapi/v3/withdrawHistory.html (HMAC SHA256)
      * */
     public function getWithdrawHistory(array $data=[]){
         $this->type='GET';
@@ -122,7 +122,7 @@ class User extends Request
 
     /**
      *获取充值地址(USER_DATA)
-    GET  /wapi/v3/depositAddress.html (HMAC SHA256)
+     * GET  /wapi/v3/depositAddress.html (HMAC SHA256)
      * */
     public function getDepositAddress(array $data=[]){
         $this->type='GET';
@@ -134,7 +134,7 @@ class User extends Request
 
     /**
      *账户状态 (USER_DATA)
-    GET /wapi/v3/accountStatus.html
+     * GET /wapi/v3/accountStatus.html
      * */
     public function getAccountStatus(array $data=[]){
         $this->signature=false;
@@ -146,7 +146,7 @@ class User extends Request
 
     /**
      *小额资产转换历史 (USER_DATA)
-    GET /wapi/v3/userAssetDribbletLog.html   (HMAC SHA256)
+     * GET /wapi/v3/userAssetDribbletLog.html   (HMAC SHA256)
      * */
     public function getAssetDribbletLog(array $data=[]){
         $this->type='GET';
@@ -157,7 +157,7 @@ class User extends Request
 
     /**
      *交易手续费率查询 (USER_DATA)
-    GET  /wapi/v3/tradeFee.html (HMAC SHA256)
+     * GET  /wapi/v3/tradeFee.html (HMAC SHA256)
      * */
     public function getTradeFee(array $data=[]){
         $this->type='GET';
@@ -168,7 +168,7 @@ class User extends Request
 
     /**
      *上架资产详情 (USER_DATA)
-    GET  /wapi/v3/assetDetail.html (HMAC SHA256)
+     * GET  /wapi/v3/assetDetail.html (HMAC SHA256)
      * */
     public function getAssetDetail(array $data=[]){
         $this->type='GET';

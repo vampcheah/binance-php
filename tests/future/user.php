@@ -9,7 +9,7 @@
  * Most of them are unfinished and need your help
  * https://github.com/zhouaini528/huobi-php.git
  * */
-use Francis\Binance\BinanceFuture;
+use Francis\BinanceFuture;
 
 require __DIR__ .'../../../vendor/autoload.php';
 

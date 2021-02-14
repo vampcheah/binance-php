@@ -22,18 +22,18 @@ trait SocketFunction
 
         switch ($this->config['baseurl']){
             case 'ws://fstream.binance.com':{
-                $binance=new \Francis\Binance\BinanceFuture($key_secret['key'],$key_secret['secret']);
+                $binance=new \Francis\BinanceFuture($key_secret['key'],$key_secret['secret']);
                 $listen_key=$binance->user()->postListenKey();
                 break;
             }
             case 'ws://dstream.binance.com':{
-                $binance=new \Francis\Binance\BinanceDelivery($key_secret['key'],$key_secret['secret']);
+                $binance=new \Francis\BinanceDelivery($key_secret['key'],$key_secret['secret']);
                 $listen_key=$binance->user()->postListenKey();
                 break;
             }
             //ws://stream.binance.com:9443
             default:{
-                $binance=new \Francis\Binance\Binance($key_secret['key'],$key_secret['secret']);
+                $binance=new \Francis\Binance($key_secret['key'],$key_secret['secret']);
                 $listen_key=$binance->user()->postUserDataStream();
             }
         }
