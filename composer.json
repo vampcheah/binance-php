@@ -1,0 +1,24 @@
+{
+    "name": "vampcheah/binance-php-api",
+    "type": "library",
+    "description": "Binance API Like the official document interface, Support for arbitrary extension.",
+    "license": "MIT",
+    "keywords": ["binance"],
+    "authors": [
+        {
+            "name": "francis",
+            "email": "vampcheah@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Francis\\Binance\\": "./src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "*",
+        "workerman/workerman": "*",
+        "workerman/globaldata": "*"
+    }
+}
