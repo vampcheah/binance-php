@@ -172,8 +172,8 @@ try {
 Market related API [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/future/system.php)
 
 ```php
-use Vampcheah\ExchangeFuture;
-use Vampcheah\ExchangeDelivery;
+use Vampcheah\Exchange\BinanceFuture;
+use Vampcheah\Exchange\BinanceDelivery;
 
 $binance=new BinanceFuture();
 //Or New Delivery
@@ -248,8 +248,8 @@ try {
 Trade related API [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/future/trade.php)
 
 ```php
-use Vampcheah\ExchangeFuture;
-use Vampcheah\ExchangeDelivery;
+use Vampcheah\Exchange\BinanceFuture;
+use Vampcheah\Exchange\BinanceDelivery;
 
 $binance=new BinanceFuture();
 //Or New Delivery
@@ -302,8 +302,8 @@ try {
 User related API [More](https://github.com/vampcheah/binance-php-api/blob/master/tests/future/user.php)
 
 ```php
-use Vampcheah\ExchangeFuture;
-use Vampcheah\ExchangeDelivery;
+use Vampcheah\Exchange\BinanceFuture;
+use Vampcheah\Exchange\BinanceDelivery;
 
 $binance=new BinanceFuture();
 //Or New Delivery
@@ -378,7 +378,7 @@ Websocket has two services, server and client. The server is responsible for dea
 
 Server initialization must be started in cli mode.
 ```php
-use \Vampcheah\ExchangeWebSocket;
+use \Vampcheah\Exchange\BinanceWebSocket;
 require __DIR__ .'./vendor/autoload.php';
 
 $binance=new BinanceWebSocket();

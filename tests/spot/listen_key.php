@@ -7,9 +7,8 @@
  * Fill in your key and secret and pass can be directly run
  *
  * Most of them are unfinished and need your help
- * https://github.com/zhouaini528/huobi-php.git
  * */
-use Vampcheah\Exchange;
+use Vampcheah\Exchange\Binance;
 
 require __DIR__ .'../../../vendor/autoload.php';
 
@@ -39,6 +38,3 @@ try {
 }catch (\Exception $e){
     print_r(json_decode($e->getMessage(),true));
 }
-
-
-

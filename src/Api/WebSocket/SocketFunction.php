@@ -22,12 +22,12 @@ trait SocketFunction
 
         switch ($this->config['baseurl']){
             case 'ws://fstream.binance.com':{
-                $binance=new \Vampcheah\ExchangeFuture($key_secret['key'],$key_secret['secret']);
+                $binance=new \Vampcheah\Exchange\BinanceFuture($key_secret['key'],$key_secret['secret']);
                 $listen_key=$binance->user()->postListenKey();
                 break;
             }
             case 'ws://dstream.binance.com':{
-                $binance=new \Vampcheah\ExchangeDelivery($key_secret['key'],$key_secret['secret']);
+                $binance=new \Vampcheah\Exchange\BinanceDelivery($key_secret['key'],$key_secret['secret']);
                 $listen_key=$binance->user()->postListenKey();
                 break;
             }

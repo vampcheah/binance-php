@@ -7,9 +7,8 @@
  * Fill in your key and secret and pass can be directly run
  *
  * Most of them are unfinished and need your help
- * https://github.com/zhouaini528/okex-php.git
  * */
-use \Vampcheah\ExchangeWebSocket;
+use \Vampcheah\Exchange\BinanceWebSocket;
 
 require __DIR__ .'../../../vendor/autoload.php';
 
@@ -40,4 +39,3 @@ $binance->config([
 ]);
 
 $binance->start();
-
