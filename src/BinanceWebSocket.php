@@ -5,15 +5,14 @@
 
 namespace Vampcheah\Exchange;
 
-use Vampcheah\Exchange\Api\WebSocket\SocketServer;
-use Vampcheah\Exchange\Api\WebSocket\SocketClient;
-
+use Workerman\Connection\AsyncTcpConnection;
 
 class BinanceWebSocket
 {
     private $server=null;
     private $client=null;
     private $config=[];
+    private $subscribe=[];
 
     /**
      * @param array $config
@@ -23,65 +22,41 @@ class BinanceWebSocket
     }
 
     /**
-     * @return SocketServer
+     * @param array $subscribe
      */
-    public function server(){
-        return $this->server = new SocketServer($this->config);
+    public function subscribe(array $subscribe=[]){
+        $data=[
+            "method"=>"SUBSCRIBE",
+            'params'=>$sub,
+            'id'=>1
+        ];
+        $this->subscribe=json_encode($subscribe);
     }
 
     /**
-     * @return SocketClient|null
+     * 执行 AsyncTcpConnection
      */
-    public function client(){
-        if($this->client!==null) return $this->client;
-        return $this->client = new SocketClient($this->config);
+    public function run(callable $callback){
+        $ws = new AsyncTcpConnection($this->getBaseUrl());
+        $ws->transport = 'ssl';
+        $ws->send($this->subscribe);
+        $ws->onMessage = function($connection, $data){
+            // self::liveUpdate(json_decode($data, true));
+            $json = json_decode($data);
+            call_user_func($callback, $this, $data);
+        };
+        $ws->onError = function($ws, $code, $msg){
+            $ws->reConnect(1);
+        };
+        $ws->onClose = function($ws) {
+            // 如果连接断开，则在1秒后重连
+            $ws->reConnect(1);
+        };
+        $ws->connect();
     }
 
-    /**
-     *
-     */
-    public function start(){
-        $this->server()->start();
+    private function getBaseUrl(){
+        $baseurl=isset($this->config['baseurl']) ? $this->config['baseurl'] : 'ws://stream.binance.com:9443';
+        return $baseurl.'/stream';
     }
-
-    /**
-     * @param array $keysecret
-     */
-    function keysecret(array $keysecret=[]){
-        $this->client()->keysecret($keysecret);
-    }
-
-    /**
-     * @param array $sub
-     */
-    public function subscribe(array $sub=[]){
-        $this->client()->subscribe($sub);
-    }
-
-    /**
-     * @param array $sub
-     */
-    public function unsubscribe(array $sub=[]){
-        $this->client()->unsubscribe($sub);
-    }
-
-    /**
-     * @param array $sub
-     * @param null $callback
-     * @param bool $daemon
-     * @return array
-     */
-    public function getSubscribe(array $sub,$callback=null,$daemon=false){
-        return $this->client()->getSubscribe($sub,$callback,$daemon);
-    }
-
-    /**
-     * @param null $callback
-     * @param bool $daemon
-     * @return array
-     */
-    public function getSubscribes($callback=null,$daemon=false){
-        return $this->client()->getSubscribes($callback,$daemon);
-    }
-
 }
