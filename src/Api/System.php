@@ -125,11 +125,11 @@ class System extends Request
 
     /**
      * 系统状态 (System)
-     * GET /wapi/v3/systemStatus.html
+     * GET /sapi/v1/system/status
      * */
     public function getSystemStatus(array $data=[]){
         $this->type='GET';
-        $this->path='/wapi/v3/systemStatus.html';
+        $this->path='/sapi/v1/system/status';
         $this->data=$data;
         return $this->exec();
     }

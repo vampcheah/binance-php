@@ -100,33 +100,33 @@ class User extends Request
 
     /**
      *充值历史 (USER_DATA)
-     * GET /wapi/v3/depositHistory.html (HMAC SHA256)
+     * GET /sapi/v1/capital/deposit/hisrec (HMAC SHA256)
      * */
     public function getDepositHistory(array $data=[]){
         $this->type='GET';
-        $this->path='/wapi/v3/depositHistory.html';
+        $this->path='/sapi/v1/capital/deposit/hisrec';
         $this->data=$data;
         return $this->exec();
     }
 
     /**
      *提现历史 (USER_DATA)
-     * GET /wapi/v3/withdrawHistory.html (HMAC SHA256)
+     * GET /sapi/v1/capital/withdraw/history (HMAC SHA256)
      * */
     public function getWithdrawHistory(array $data=[]){
         $this->type='GET';
-        $this->path='/wapi/v3/withdrawHistory.html';
+        $this->path='/sapi/v1/capital/withdraw/history';
         $this->data=$data;
         return $this->exec();
     }
 
     /**
      *获取充值地址(USER_DATA)
-     * GET  /wapi/v3/depositAddress.html (HMAC SHA256)
+     * GET  /sapi/v1/capital/deposit/address (HMAC SHA256)
      * */
     public function getDepositAddress(array $data=[]){
         $this->type='GET';
-        $this->path='/wapi/v3/depositAddress.html';
+        $this->path='/sapi/v1/capital/deposit/address';
         $this->data=$data;
         return $this->exec();
     }
@@ -134,45 +134,45 @@ class User extends Request
 
     /**
      *账户状态 (USER_DATA)
-     * GET /wapi/v3/accountStatus.html
+     * GET /sapi/v1/account/status
      * */
     public function getAccountStatus(array $data=[]){
         $this->signature=false;
         $this->type='GET';
-        $this->path='/wapi/v3/accountStatus.html';
+        $this->path='/sapi/v1/account/status';
         $this->data=$data;
         return $this->exec();
     }
 
     /**
      *小额资产转换历史 (USER_DATA)
-     * GET /wapi/v3/userAssetDribbletLog.html   (HMAC SHA256)
+     * GET /sapi/v1/asset/dribblet   (HMAC SHA256)
      * */
     public function getAssetDribbletLog(array $data=[]){
         $this->type='GET';
-        $this->path='/wapi/v3/userAssetDribbletLog.html';
+        $this->path='/sapi/v1/asset/dribblet';
         $this->data=$data;
         return $this->exec();
     }
 
     /**
      *交易手续费率查询 (USER_DATA)
-     * GET  /wapi/v3/tradeFee.html (HMAC SHA256)
+     * GET  /sapi/v1/asset/tradeFee (HMAC SHA256)
      * */
     public function getTradeFee(array $data=[]){
         $this->type='GET';
-        $this->path='/wapi/v3/tradeFee.html';
+        $this->path='/sapi/v1/asset/tradeFee';
         $this->data=$data;
         return $this->exec();
     }
 
     /**
      *上架资产详情 (USER_DATA)
-     * GET  /wapi/v3/assetDetail.html (HMAC SHA256)
+     * GET  /sapi/v1/asset/assetDetail (HMAC SHA256)
      * */
     public function getAssetDetail(array $data=[]){
         $this->type='GET';
-        $this->path='/wapi/v3/assetDetail.html';
+        $this->path='/sapi/v1/asset/assetDetail';
         $this->data=$data;
         return $this->exec();
     }
